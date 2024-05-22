@@ -26,8 +26,8 @@ FROM learning_sql.us_housing_units;
 Now, let's introduce the concept of aliases. When you use AS in SQL, it's like giving a column a nickname. This can be handy for renaming columns or making the output more readable. For example, if you want to rename the "year" column as "Year" in your query, you can do so using AS:
 ```
 SELECT	year AS Year, 
-		month AS Month, 
-		month_name AS Month_Name
+	month AS Month, 
+	month_name AS Month_Name
 FROM learning_sql.us_housing_units;
 ```
 ![Select_3](https://github.com/elizabethwanjiku703/Mastering-the-Basics-A-Guide-to-Understanding-SQL/blob/main/Select_3.JPG)
@@ -54,4 +54,4 @@ LIMIT 15;
 This query will return only the first 15 rows from the "learning_sql.us_housing_units" table. You can adjust the number in the LIMIT statement to retrieve a different number of rows based on your needs.
 Also, you can limit the rows if you are using the MySQL Workbench on topo of the script editor, you can see somoething written **"Don't Limit"** as shown on the picture below. 
 ![Limit_2](https://github.com/elizabethwanjiku703/Mastering-the-Basics-A-Guide-to-Understanding-SQL/blob/main/Limit_2.jpg)
-In summary, the LIMIT statement is a simple and effective way to control the number of rows returned by a query, making it easier to work with large datasets and focus on the specific data you need.
+> In summary, the LIMIT statement is a simple and effective way to control the number of rows returned by a query, making it easier to work with large datasets and focus on the specific data you need.
