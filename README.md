@@ -11,4 +11,6 @@ The query would look something like this:
 SELECT year
 FROM learning_sql.us_housing_units;
 ```
+![Schema](https://github.com/elizabethwanjiku703/Mastering-the-Basics-A-Guide-to-Understanding-SQL/blob/main/Schema.JPG)
+![Select_1](https://github.com/elizabethwanjiku703/Mastering-the-Basics-A-Guide-to-Understanding-SQL/blob/main/Select_1.JPG)
 
