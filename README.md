@@ -91,4 +91,61 @@ WHERE month_name = "January";
 
 ![Where_2](https://github.com/elizabethwanjiku703/Mastering-the-Basics-A-Guide-to-Understanding-SQL/blob/main/Where_2.JPG)
 
-> Note that when using MySQL Workbench, it is crucial to use double parentheses for conditions like column names to avoid errors. Paying attention to these details can help prevent common mistakes that may occur during query writing. 
+> Note that when using MySQL Workbench, it is crucial to use double parentheses for conditions like column names to avoid errors. Paying attention to these details can help prevent common mistakes that may occur during query writing.
+
+## SQL Comparison Operators
+SQL Comparison Operators are used to compare values in SQL queries to determine if a certain condition is true or false. These operators help filter data based on specific criteria, making it easier to retrieve the desired information from a database.
+Here's a simple explanation of some common SQL Comparison Operators:
+1. Equal to (=): This operator is used to check if two values are equal. For example, column_name = value will return rows where the column value is equal to the specified value.
+2. Not equal to (!= or <>): This operator is used to check if two values are not equal. For example, column_name != value will return rows where the column value is not equal to the specified value.
+3. Greater than (>): This operator is used to check if a value is greater than another value. For example, column_name > value will return rows where the column value is greater than the specified value.
+4. Less than (<): This operator is used to check if a value is less than another value. For example, column_name < value will return rows where the column value is less than the specified value.
+5. Greater than or equal to (>=): This operator is used to check if a value is greater than or equal to another value. For example, column_name >= value will return rows where the column value is greater than or  equal to the specified value.
+6. Less than or equal to (<=): This operator is used to check if a value is less than or equal to another value. For example, column_name <= value will return rows where the column value is less than or equal to the specified value.
+   
+Let’s try some few problems based on [Mode SQL Tutorials](https://mode.com/sql-tutorial/sql-operators)
+1. Did the West Region ever produce more than 50,000 housing units in one month?
+   Here is the code: N/B all units all in were already in thousands
+```
+SELECT *
+FROM learning_sql.us_housing_units
+WHERE west > 50;
+```
+
+Look at the results
+
+![Operator_1](https://github.com/elizabethwanjiku703/Mastering-the-Basics-A-Guide-to-Understanding-SQL/blob/main/Operator_1.JPG)
+
+2. Did the South Region ever produce 20,000 or fewer housing units in one month?
+```   
+SELECT *
+FROM learning_sql.us_housing_units
+WHERE south < 20;
+```
+
+Look at the results
+
+![Operator_2](https://github.com/elizabethwanjiku703/Mastering-the-Basics-A-Guide-to-Understanding-SQL/blob/main/Operator_2.JPG)
+
+Its also worth noting that for non-numerical data one can use the above comparison operators to filter rows that either match or do not much a specific value with the use of “=” and “!=”. For example, the below query shows that none of march rows shows up
+
+For example, run the following query and you'll notice that none of the January rows show up:
+```
+SELECT *
+FROM learning_sql.us_housing_units
+WHERE month_name !='March';
+```
+![Operator_3](https://github.com/elizabethwanjiku703/Mastering-the-Basics-A-Guide-to-Understanding-SQL/blob/main/Operator_3.JPG)
+
+It is good to note that when using non numeric values you need to use single quotes  such as above code.
+Greater than (>), Less than (<), Greater than or equal to (>=), Less than or equal to (<=): These operators can also be applied to non-numeric columns in SQL. They filter based on alphabetical order when used with non-numeric values. 
+For instance, SELECT * FROM table WHERE column_name > 'value'; will filter rows where the column value is alphabetically greater than 'value'
+```
+SELECT *
+FROM learning_sql.us_housing_units
+WHERE month_name > 'March';
+```
+![Operator_3](https://github.com/elizabethwanjiku703/Mastering-the-Basics-A-Guide-to-Understanding-SQL/blob/main/Operator_4.JPG)
+
+
+
