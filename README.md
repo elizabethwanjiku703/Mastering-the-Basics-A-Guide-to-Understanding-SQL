@@ -129,7 +129,7 @@ Look at the results
 
 Its also worth noting that for non-numerical data one can use the above comparison operators to filter rows that either match or do not much a specific value with the use of “=” and “!=”. For example, the below query shows that none of march rows shows up
 
-For example, run the following query and you'll notice that none of the January rows show up:
+For example, run the following query and you'll notice that none of the March rows show up:
 ```
 SELECT *
 FROM learning_sql.us_housing_units
