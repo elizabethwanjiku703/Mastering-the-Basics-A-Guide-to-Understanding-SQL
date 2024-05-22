@@ -60,19 +60,22 @@ Also, you can limit the rows if you are using the MySQL Workbench on topo of the
 The SQL WHERE clause is like a filter that helps you find specific rows in a database table that meet certain conditions. It allows you to narrow down your search and retrieve only the data that matches the criteria you specify.
 Here's a simple explanation of how the WHERE clause works:
 Imagine you have a table with a lot of rows, but you are interested in finding rows that meet specific conditions, such as employees with a certain job title or customers from a particular city. This is where the WHERE clause comes in. When you use the WHERE clause in a SQL query, you can add conditions that the rows must satisfy to be included in the result set. For example, if you want to find all housing units where the month_name was "I",, you can write a query like this:
-> Please note if the where statement is accompanied by a number then no need to use parentheses. 
+> Please note if the where statement is accompanied by a number then no need to use parentheses.
+
 ```
 SELECT *
 FROM learning_sql.us_housing_units
 WHERE month = 1
 ```
+
 The results would look like this:
 ![Where_1](https://github.com/elizabethwanjiku703/Mastering-the-Basics-A-Guide-to-Understanding-SQL/blob/main/Where_1.JPG)
-
 When writing a WHERE statement with a name (not a number), it is important to use parentheses. For example, if you want to find all housing units where the month_name is 'January', you should write the query like this:
+
 ```
 SELECT *
 FROM learning_sql.us_housing_units
 WHERE month_name = "January";
 ```
+![Where_2](https://github.com/elizabethwanjiku703/Mastering-the-Basics-A-Guide-to-Understanding-SQL/blob/main/Where_2.JPG)
 > Note that when using MySQL Workbench, it is crucial to use double parentheses for conditions like column names to avoid errors. Paying attention to these details can help prevent common mistakes that may occur during query writing. 
