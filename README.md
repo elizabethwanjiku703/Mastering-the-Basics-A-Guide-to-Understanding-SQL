@@ -39,3 +39,19 @@ FROM learning_sql.us_housing_units;
 ![Select_4](https://github.com/elizabethwanjiku703/Mastering-the-Basics-A-Guide-to-Understanding-SQL/blob/main/Select_4.JPG)
 > As you can see, the results are the same as using aliases, but I think due to readability it's better to us AS
 By mastering the art of using SELECT and FROM in SQL queries, you gain the power to retrieve and display data in a way that suits your needs, making data manipulation a breeze.
+
+## LIMIT statement in SQL
+The LIMIT statement in SQL is used to restrict the number of rows returned by a query. It is particularly useful when you want to see only a certain number of rows from a result set, especially when dealing with large datasets. Here's a simple explanation of how the LIMIT statement works:
+Imagine you have a table with a lot of rows, but you are only interested in seeing the first few rows. You can use the LIMIT statement to specify the maximum number of rows you want to retrieve from the database.
+For example, if you want to see only the first 15 rows of a table, you can use the LIMIT statement like this:
+```
+SELECT * 
+FROM learning_sql.us_housing_units
+LIMIT 15;
+```
+![Limit_1](https://github.com/elizabethwanjiku703/Mastering-the-Basics-A-Guide-to-Understanding-SQL/blob/main/Limit_1.JPG)
+
+This query will return only the first 15 rows from the "learning_sql.us_housing_units" table. You can adjust the number in the LIMIT statement to retrieve a different number of rows based on your needs.
+Also, you can limit the rows if you are using the MySQL Workbench on topo of the script editor, you can see somoething written **"Don't Limit"** as shown on the picture below. 
+![Limit_2](https://github.com/elizabethwanjiku703/Mastering-the-Basics-A-Guide-to-Understanding-SQL/blob/main/Limit_2.jpg)
+In summary, the LIMIT statement is a simple and effective way to control the number of rows returned by a query, making it easier to work with large datasets and focus on the specific data you need.
