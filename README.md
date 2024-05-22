@@ -13,4 +13,29 @@ FROM learning_sql.us_housing_units;
 ```
 ![Schema](https://github.com/elizabethwanjiku703/Mastering-the-Basics-A-Guide-to-Understanding-SQL/blob/main/Schema.JPG)
 ![Select_1](https://github.com/elizabethwanjiku703/Mastering-the-Basics-A-Guide-to-Understanding-SQL/blob/main/Select_1.JPG)
-
+> In this query, SELECT helps you pick the "year" column, and FROM tells the database to look for this information in the learning_sql table.
+### Selecting All Columns
+Now, let's talk about the wildcard symbol. When you use, it's like saying, "Show me everything!" It selects all columns from the specified table, giving you a comprehensive view of the data. For instance, if you want to see all the details of housing units, you can use * to select all columns:
+```
+SELECT *
+FROM learning_sql.us_housing_units;
+```
+![Select_2](https://github.com/elizabethwanjiku703/Mastering-the-Basics-A-Guide-to-Understanding-SQL/blob/main/Select_2.JPG)
+> This query will fetch all columns (such as year, month, month_name, etc.) from the "learning_sql" table, providing a complete snapshot of each housing's information.
+### Using Aliases with AS
+Now, let's introduce the concept of aliases. When you use AS in SQL, it's like giving a column a nickname. This can be handy for renaming columns or making the output more readable. For example, if you want to rename the "year" column as "Year" in your query, you can do so using AS:
+```
+SELECT	year AS Year, 
+		month AS Month, 
+		month_name AS Month_Name
+FROM learning_sql.us_housing_units;
+```
+![Select_3](https://github.com/elizabethwanjiku703/Mastering-the-Basics-A-Guide-to-Understanding-SQL/blob/main/Select_3.JPG)
+Also, at some point you might forget using the AS when writing your query in such a case, you can do the following;
+```
+SELECT year "Year", month "Month"
+FROM learning_sql.us_housing_units;
+```
+![Select_4](https://github.com/elizabethwanjiku703/Mastering-the-Basics-A-Guide-to-Understanding-SQL/blob/main/Select_4.JPG)
+> As you can see, the results are the same as using aliases, but I think due to readability it's better to us AS
+By mastering the art of using SELECT and FROM in SQL queries, you gain the power to retrieve and display data in a way that suits your needs, making data manipulation a breeze.
