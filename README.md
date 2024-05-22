@@ -147,5 +147,68 @@ WHERE month_name > 'March';
 ```
 ![Operator_3](https://github.com/elizabethwanjiku703/Mastering-the-Basics-A-Guide-to-Understanding-SQL/blob/main/Operator_4.JPG)
 
+## Arithmetic in SQL
+Arithmetic operations in SQL allow you to perform mathematical calculations on numerical data. Here is a step-by-step guide on how to use arithmetic operators in SQL:
+* Addition (+): Adds two numerical values together.
+* Subtraction (-): Subtracts one numerical value from another.
+* Multiplication (*): Multiplies two numerical values.
+* Division (/): Divides one numerical value by another.
+* Modulus (%): Returns the remainder of a division operation.
+* Unary Plus (+): Represents a positive value.
+* Unary Minus (-): Represents a negative value.
+For example, let’s write a sum of south and west giving the results a new column name. It is also worth noting that you can link together arithmetic functions, using both column names and specific numerical values in sequence.
+Let’s practice more problems.
+1. Write a query that calculates the sum of all four regions in a separate column.
+```
+SELECT	year,
+	month,
+	month_name,
+	south,
+	west,
+	midwest,
+	northeast,
+	(south + west + midwest + northeast) AS Sum_All_Regions
+FROM learning_sql.us_housing_units;
+```
+Here are the results
+
+![Arithmetic_2](https://github.com/elizabethwanjiku703/Mastering-the-Basics-A-Guide-to-Understanding-SQL/blob/main/Arithmetic_2.JPG)
+
+2. Write a query that returns all rows for which more units were produced in the West region than in the Midwest and Northeast combined.
+```
+SELECT	year,
+	month,
+	month_name,
+	south,
+	west,
+	midwest,
+	northeast
+FROM learning_sql.us_housing_units
+WHERE west > (midwest + northeast);
+```
+
+Here are the results
+
+![Arithmetic_3](https://github.com/elizabethwanjiku703/Mastering-the-Basics-A-Guide-to-Understanding-SQL/blob/main/Arithmetic_3.JPG)
+
+3. Write a query that calculates the percentage of all houses completed in the United States represented by each region. Only return results from the year 2000 and later.  Hint: There should be four columns of percentages.
+   
+```
+SELECT 
+    year,
+    month,
+    ROUND (south / (south + west + midwest + northeast) * 100, 4) AS 'South_Percent',
+    ROUND (west / (south + west + midwest + northeast) * 100, 4)  AS 'West_Percent',
+    ROUND (midwest / (south + west + midwest + northeast) * 100, 4) AS 'Midwest_Percent',
+    ROUND (northeast / (south + west + midwest + northeast) * 100, 4) AS 'Northeast_Percent'
+FROM
+    	learning_sql.us_housing_units
+WHERE
+	year >= 2000;
+```
+
+Here are the results
+
+![Arithmetic_4](https://github.com/elizabethwanjiku703/Mastering-the-Basics-A-Guide-to-Understanding-SQL/blob/main/Arithmetic_4.JPG)
 
 
